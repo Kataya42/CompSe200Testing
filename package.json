@@ -7,8 +7,16 @@
   "scripts": {
     "test": "jest"
   },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
   "author": "",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "@babel/preset-env": "^7.16.4",
+    "jest": "^27.3.1"
+  },
   "devDependencies": {}
 }
