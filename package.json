@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "coverage": "jest --coverage && coveralls < coverage/lcov.info"
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
   },
   "jest": {
     "transform": {
