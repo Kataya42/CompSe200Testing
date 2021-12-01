@@ -26,5 +26,9 @@ describe("Gets the value at `path` of `object`. If the resolved value is `undefi
     const object = { 'a': [{ 'b': { 'c': 3 } }] }
     expect(get(object, ['a', '0', 'b', 'c'], 'default')).toStrictEqual(3);
   });
+  test("null.", () => {
+    expect(get(null, ['a', '0', 'b', 'c'], 'default')).toStrictEqual("default");
+  });
+  
 
 });

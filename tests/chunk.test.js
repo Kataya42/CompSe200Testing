@@ -14,4 +14,8 @@ describe("Creates an array of elements split into groups the length of `size`. I
     expect(chunk([], 2)).toStrictEqual([]);
   });
   
+  test("Null",  () => {
+    expect(chunk(null, 2)).toStrictEqual([]);
+  });
+
 });

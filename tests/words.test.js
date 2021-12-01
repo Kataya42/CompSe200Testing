@@ -6,13 +6,14 @@ describe("Splits `string` into an array of its words.", () => {
     expect(words('fred, barney, pebbles')).toStrictEqual(['fred', 'barney', 'pebbles']);
   });
 
-  test("ampersand split", () => {
+  test("pattern defined", () => {
     expect(words('fred, barney, & pebbles', /[^, ]+/g)).toStrictEqual(['fred', 'barney', '&', 'pebbles']);
   });
 
   test("Empty array", () => {
     expect(words("")).toStrictEqual([]);
   });
+
 
 
 

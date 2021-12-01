@@ -1,5 +1,14 @@
 import isEmpty from "../src/isEmpty";
 
+const testPerson = {
+        name: "matti",
+        age: 28,
+        motivation: false
+    };
+
+const emptyTestPerson = {
+};
+
 describe("Checks if `value` is an empty object, collection, map, or set. Objects are considered empty if they have no own enumerable string keyed properties. Array-like values such as `arguments` objects, arrays, buffers, strings, or jQuery-like collections are considered empty if they have a `length` of `0`. Similarly, maps and sets are considered empty if they have a `size` of `0`.", () => {
 
   test("Null value.", () => {
@@ -15,7 +24,7 @@ describe("Checks if `value` is an empty object, collection, map, or set. Objects
   });
 
   test("Number.", () => {
-    expect(isEmpty(1)).toStrictEqual(false);
+    expect(isEmpty(1)).toStrictEqual(true);
   });
 
   test("Array.", () => {
@@ -37,5 +46,15 @@ describe("Checks if `value` is an empty object, collection, map, or set. Objects
   test("Map.", () => {
     expect(isEmpty({ 'a': 1 })).toStrictEqual(false);
   });
+  test("Empty Map.", () => {
+    expect(isEmpty({})).toStrictEqual(true);
+  });
+  test("Empty Object.", () => {
+    expect(isEmpty(emptyTestPerson)).toStrictEqual(true);
+  });
+  test("Object.", () => {
+    expect(isEmpty(testPerson)).toStrictEqual(false);
+  });
+ 
 
 });

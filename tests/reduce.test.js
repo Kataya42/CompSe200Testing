@@ -2,11 +2,11 @@ import reduce from "../src/reduce";
 
 describe("Reduces `collection` to a value which is the accumulated result of running each element in `collection` thru `iteratee`, where each successive invocation is supplied the return value of the previous. If `accumulator` is not given, the first element of `collection` is used as the initial value. The iteratee is invoked with four arguments: (accumulator, value, index|key, collection).", () => {
 
-  test("Array as collection, sum function as iteratee.", () => {
+  test("Array as collection, sum function as iteratee, number as accumulator.", () => {
     expect(reduce([1, 2], (sum, n) => sum + n, 0)).toStrictEqual(3);
   });
 
-  test("Map as collection, function as iteratee.", () => {
+  test("Map as collection, function as iteratee, empty map as accumulator.", () => {
     expect(
       reduce({ 'a': 1, 'b': 2, 'c': 1 }, (result, value, key) => {
           (result[value] || (result[value] = [])).push(key)
