@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "coveralls": "jest --coverage && coveralls < coverage/lcov.info"
   },
   "jest": {
     "transform": {
