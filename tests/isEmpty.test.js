@@ -14,8 +14,8 @@ describe("Checks if `value` is an empty object, collection, map, or set. Objects
     expect(isEmpty(false)).toStrictEqual(true);
   });
 
-  test("Integer.", () => {
-    expect(isEmpty(1)).toStrictEqual(true);
+  test("Number.", () => {
+    expect(isEmpty(1)).toStrictEqual(false);
   });
 
   test("Array.", () => {
