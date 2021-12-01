@@ -50,6 +50,12 @@ describe("Creates a slice of `array` from `start` up to, but not including, `end
     expect(slice(array, 5)).toStrictEqual([]);
   });
 
+  test("Negative end value.", () => {
+    expect(slice(array, 0, -1)).toStrictEqual([1, 2, 3]);
+  });
 
+  test("starting point a negative number while -start>length", () => {
+    expect(slice(array, -5)).toStrictEqual([1, 2, 3, 4]);
+  });
 
 });
