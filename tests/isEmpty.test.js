@@ -11,19 +11,27 @@ describe("Checks if `value` is an empty object, collection, map, or set. Objects
   });
 
   test("Boolean value as false.", () => {
-    expect(isEmpty(false)).toStrictEqual(false);
+    expect(isEmpty(false)).toStrictEqual(true);
   });
 
-  test("Integer", () => {
-    expect(isEmpty(1)).toStrictEqual(false);
+  test("Integer.", () => {
+    expect(isEmpty(1)).toStrictEqual(true);
   });
 
   test("Array.", () => {
     expect(isEmpty([1, 2, 3])).toStrictEqual(false);
   });
 
+  test("Empty array.", () => {
+    expect(isEmpty([])).toStrictEqual(true);
+  });
+
   test("String.", () => {
     expect(isEmpty('abc')).toStrictEqual(false);
+  });
+
+  test("Empty string.", () => {
+    expect(isEmpty('')).toStrictEqual(true);
   });
 
   test("Map.", () => {
