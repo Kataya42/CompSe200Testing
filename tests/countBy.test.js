@@ -9,8 +9,8 @@ const users = [
 describe(" Creates an object composed of keys generated from the results of running each element of `collection` thru `iteratee`", () => {
 
     
-  test("!REQUIRED!", () => {
-    expect(countBy(users, value => value.active)).toStrictEqual({"true": 2, "false": 1})
+  test("Basic count", () => {
+    expect(countBy(users, value => value.active)).toStrictEqual({"true": 2, "false": 1});
   });
 
 
